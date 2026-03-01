@@ -17,13 +17,20 @@ This is a powerful Telegram Userbot written in Go, powered by the **GLM-4.6V-Fla
 
 ## Setup
 
-1.  **Clone the repository**.
-2.  **Copy `.env.example` to `.env`**:
+1.  **Get Telegram Credentials**:
+    -   Go to [https://my.telegram.org](https://my.telegram.org) and log in with your phone number.
+    -   Click on **"API development tools"**.
+    -   Fill in the form to create a new application (you can use any name, e.g., "MyUserBot").
+    -   Copy the **App api_id** and **App api_hash**.
+
+2.  **Clone the repository**.
+3.  **Copy `.env.example` to `.env`**:
     ```bash
     cp .env.example .env
     ```
-3.  **Fill in the `.env` file**:
-    -   `TELEGRAM_APP_ID` and `TELEGRAM_APP_HASH`: From my.telegram.org.
+4.  **Fill in the `.env` file**:
+    -   `TELEGRAM_APP_ID`: Paste your **App api_id**.
+    -   `TELEGRAM_APP_HASH`: Paste your **App api_hash**.
     -   `GLM_API_KEY`: Your Zhipu AI API key.
     -   `TARGET_GROUP_ID`: The ID of the group you want to monitor. Set to `0` to monitor all chats (use with caution!). To get a group ID, you can use other bots like `@username_to_id_bot` or enable generic logging in the code temporarily.
 
